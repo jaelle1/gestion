@@ -5,7 +5,7 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./assets/enregistrement.css">
+     <link rel="stylesheet" href="./assets/abonne.css">
      <link rel="stylesheet" href="./assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
 
 
@@ -68,11 +68,11 @@
              </div>
              <div class=" col-md-8 offset-md-2">
                  <form action="" method="">
-                     Nom<input value="<?php echo "$nom" ?>" class="inputnom"><br>
-                     Date_N <input value="<?php echo "$date_n" ?>" class="inputdaten"><br>
-                     Date_D_A <input value="<?php echo "$date_d_ab" ?>" class="inputdated"><br>
-                     Tel <input value="<?php echo "$telephone" ?>" class="inputtel"><br>
-                     E-mail <input value="<?php echo "$email" ?>" class="inputmail"><br /><br>
+                     <input value="<?php echo "$nom" ?>" class="inputnom"><br>
+                      <input value="<?php echo "$date_n" ?>" class="inputdaten"><br>
+                      <input value="<?php echo "$date_d_ab" ?>" class="inputdated"><br>
+                     <input value="<?php echo "$telephone" ?>" class="inputtel"><br>
+                     <input value="<?php echo "$email" ?>" class="inputmail"><br /><br>
 
                  </form>
                  <a href="liste.php"> <button type="submit" value="Annuler" name="annuler" id="annuler">Annuler</button></a>
