@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/*debut index.php*/
+.logo {
+  height: 200px;
+  width: 300px;
+}
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+/*partie se connecter debut*/
+.coco {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+div h2 {
+  background-color: rgb(161, 161, 160);
+  border-radius: 50px;
+  height: 60px;
+  width: 200px;
+  margin-top: 4rem;
+  padding: 5px;
+}
+/*partie se connecter fin*/
+h2 a {
+  text-decoration: none;
+  color: white;
+  /* padding:10px; */
+}
+
+/*footer*/
+.footer {
+  background-color: #750202;
+  margin-top: 11rem;
+}
+.footer h1 {
+  color: white;
+  font-size: 50px;
+  justify-content: center;
+  text-align: center;
+}
+.row .ww {
+  display: flex;
+  color: white;
+  font-weight: bold;
+}
+
+.p1 {
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+}
+.p2 {
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  /* float: right; */
+}
+
+/*fin index.php*/
+/*debut formulaire*/
+.texte {
+  float: right;
+}
+h1 {
+  margin-left: 5rem;
+  margin-bottom: 15px;
+  color: rgb(75, 2, 143);
+}
+.kia {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.tete {
+  display: flex;
+}
+.logo1 {
+  height: 75px;
+  width: 270px;
+  float: left;
+}
+.logo1 img {
+  height: 100%;
+  width: 100%;
+}
+/*formulaire meme*/
+.log {
+  height: 25px;
+  width: 40px;
+}
+.log img {
+  height: 100%;
+  width: 100%;
+}
+.formu {
+  background-color: rgb(220, 217, 213);
+  margin-top: 100px;
+}
+
+@media only screen and (max-width: 500px) {
+  .p2 {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .footer h1 {
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    text-align: center;
+  }
+}
