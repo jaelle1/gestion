@@ -10,7 +10,7 @@
 
 
 
-     <title>Document</title>
+     <title>abonnee</title>
  </head>
 
  <body>
@@ -63,24 +63,31 @@
 
      <div class="container-fluid formu">
          <div class=" row fofo">
-             <div class=" col-md-2 offset-md-4 log">
-                 <img src="./Logo.png" alt="">
+             <div class=" col-md-8 offset-md-2  log">
+                 <h1>Ajout Effectué !!</h1>
              </div>
-             <div class=" col-md-8 offset-md-2">
-                 <form action="" method="">
-                     <input value="<?php echo "$nom" ?>" class="inputnom"><br>
-                      <input value="<?php echo "$date_n" ?>" class="inputdaten"><br>
-                      <input value="<?php echo "$date_d_ab" ?>" class="inputdated"><br>
-                     <input value="<?php echo "$telephone" ?>" class="inputtel"><br>
-                     <input value="<?php echo "$email" ?>" class="inputmail"><br /><br>
+             <div class=" col-md-12 format">
+                 <div class="inser">
+                     <form action="" method="">
+                         <input value="<?php echo "$nom" ?>" class="inputnom"><br>
+                         <input value="<?php echo "$date_n" ?>" class="inputdaten"><br>
+                         <input value="<?php echo "$date_d_ab" ?>" class="inputdated"><br>
+                         <input value="<?php echo "$telephone" ?>" class="inputtel"><br>
+                         <input value="<?php echo "$email" ?>" class="inputmail"><br /><br>
 
-                 </form>
-                 <a href="liste.php"> <button type="submit" value="Annuler" name="annuler" id="annuler">Annuler</button></a>
-                 <a href="modifier.php"> <button type="submit" value="Valider" name="valider" id="Valider"> Valider</button></a>
-
+                     </form>
+                 </div>
+                 <div class="forma1">
+                     <div class=" col-md-1 offset-md-4 coca1"><img src="./im1.jpg"></div>
+                     <div class="coca">
+                         <div class="spa"> <span> <a href="liste.php"> <button type="submit" value="Valider" name="valider" id="Lister"> Modifier</button></a></span> <span><a href="liste.php"> <button type="submit" value="Annuler" name="annuler" id="annuler">Fermer</button></a></span></div>
+                     </div>
+                     <a href="liste.php" class="list"> <button type="submit" value="Lister" name="lister" id="lister">Lister</button></a>
+                 </div>
 
              </div>
          </div>
+     </div>
 
      </div>
 
