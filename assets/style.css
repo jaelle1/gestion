@@ -251,7 +251,7 @@ span a{
 
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 768px) {
 
     .p2{
         color: white;
@@ -304,12 +304,12 @@ form label{
 span.btn{
     background-color:blue;
     color: white;
-    height: 20px;
+    height: 30px;
     width: 75px;
 }
 span.btnn{
     background-color: red;
-    height: 15px;
+    height: 30px;
     width: 70px;
     border: solid 1px;
     border-radius: 50px;
@@ -332,36 +332,36 @@ span.btnn{
 }
 span.enre{
     border: solid 1px;
-    height: 20px;
+    height: 30px;
     width: 120px;
     background-color: blue;
     font-size: 20px;
     font-weight: bold;
     border-radius:50px;
-    padding-top: 5px;
+    /* padding-top: 5px; */
 }
 span.list{
     border: solid 1px;
-    height: 20px;
+    height: 30px;
     width: 120px;
     background-color:green;
     font-size: 20px;
     font-weight: bold;
     border-radius:50px;
     margin-left: 100px;
-    padding-top: 5px;
+    /* padding-top: 5px; */
 }
 
 span.ferm{
     border: solid 1px;
     border-radius:50px;
-    height: 15px;
+    height: 30px;
     width: 80px;
     background-color: red ;
     font-size: 15px;
     font-weight: bold;
     margin-top: 18px;
-    padding-top: 5px;
+    /* padding-top: 5px; */
     
 }
 }
