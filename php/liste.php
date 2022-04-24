@@ -122,7 +122,7 @@
 
 
 
-    <!-- le footer  -->
+    <!-- le footer ok -->
     <div class="container-fluid footer">
         <div class="row foot">
             <div class="col-md-1">

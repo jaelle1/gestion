@@ -96,7 +96,6 @@ table {
 table th {
   border: 1px solid #750202;
   background-color: #750202 !important;
-  /* border-radius: 10px; */
   padding: 10px;
   top: 0;
   position: sticky;
@@ -110,7 +109,6 @@ table th {
 table td {
   border: 1px solid #750202;
   background-color: rgb(230, 230, 230) !important;
-  /* border-radius: 10px; */
   padding: 10px;
   color: black;
   height: 40px;
@@ -146,7 +144,6 @@ table i {
   .teta {
     display: flex;
     justify-content: center;
-
     width: 100%;
   }
   .logo1 {
@@ -166,14 +163,12 @@ table i {
     color: rgb(75, 2, 143);
   }
   .compteur {
-  border-radius: 75px !important;
   background-color: #750202 !important;
   color: white !important;
   font-size: 15px !important;
   height: 45px !important;
-  width: 75px !important;
-  float: right;
-  
+  width: 100px !important;
+  float: left;
   font-weight: bold !important;
   }
   
@@ -214,4 +209,4 @@ table i {
   .p1 {
     position: absolute;
   }
-
+}
