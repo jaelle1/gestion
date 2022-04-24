@@ -12,7 +12,7 @@ body {
   margin-top: 10px;
 }
 .logo1 {
-  height: 85px;
+  height: 65px;
   width: 150px;
   float: left;
 }
@@ -24,13 +24,23 @@ body {
   display: flex;
   top: 10px;
   width: 100%;
+  align-items: center;
 }
 
 .texte h1 {
-  font-size: 60px;
+  font-size: 50px;
   font-weight: bold;
   margin-bottom: 15px;
   color: rgb(75, 2, 143);
+}
+.compteur {
+  border-radius: 125px !important;
+  /* height: px; */
+  background-color: #750202 !important;
+  color: white !important;
+  font-size: 20px !important;
+  height: 75px !important;
+  font-weight: bold !important;
 }
 
 /* footer footer */
@@ -61,18 +71,17 @@ body {
 /* table tableau*/
 .tableau {
   width: 100%;
-  height: 525px;
+  height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .bordure {
-  margin-top: 20px;
   border: 2px solid #750202;
   border-radius: 10px;
   width: 100%;
-  height: 500px;
+  height: 430px;
   overflow-y: auto;
   overflow-x: scroll;
 }
@@ -81,27 +90,32 @@ table {
   border: #750202 solid 1px;
   border-radius: 10px;
   width: 100%;
-  height: 500px;
+  height: auto;
   border-collapse: collapse;
 }
-table th  {
+table th {
   border: 1px solid #750202;
   background-color: #750202 !important;
   /* border-radius: 10px; */
   padding: 10px;
-  color: #fff;
-  color: black;
+  top: 0;
+  position: sticky;
+  height: 40px !important;
+  color: white;
   font-weight: bold;
+  font-size: 15px;
   width: 200px;
   text-align: center;
 }
 table td {
   border: 1px solid #750202;
-  background-color: rgb(144, 185, 172) !important;
+  background-color: rgb(230, 230, 230) !important;
   /* border-radius: 10px; */
   padding: 10px;
   color: black;
+  height: 40px;
   font-weight: bold;
+  font-size: 20px;
   width: 200px;
   text-align: center;
 }
@@ -119,6 +133,9 @@ table i {
   border-radius: 25%;
   padding: 5px;
   margin-left: 10px;
+}
+.fofofo {
+  height: 40px !important;
 }
 
 @media only screen and (max-width: 768px) {
@@ -148,6 +165,19 @@ table i {
     font-weight: bold;
     color: rgb(75, 2, 143);
   }
+  .compteur {
+  border-radius: 75px !important;
+  background-color: #750202 !important;
+  color: white !important;
+  font-size: 15px !important;
+  height: 45px !important;
+  width: 75px !important;
+  float: right;
+  
+  font-weight: bold !important;
+  }
+  
+
 
   /* footer for mobile */
   .footer {
@@ -184,4 +214,4 @@ table i {
   .p1 {
     position: absolute;
   }
-}
+

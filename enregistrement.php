@@ -36,11 +36,10 @@
                     Date_D_A <input type="date" name="Date_d_ab" id="" class="inputdated"><br>
                     Tel <input type="number" name="telephone" id="" class="inputtel"><br>
                     E-mail <input type="email" name="email" id="" class="inputmail"><br /><br>
-                    <button type="submit" value="Annuler" name="annuler" id="annuler">Annuler</button>
-                    <button type="submit" value="Valider" name="valider" id="Valider"> Valider</button>
+                    <span class="buton"> <button type="submit" value="Annuler" name="annuler" id="annuler">Annuler</button></span>
+                    <span class="buton1"><button type="submit" value="Valider" name="valider" id="Valider"> Valider</button></span>
 
                 </form>
-                <a href="liste.php"> <button value="Lister" name="lister" id="Lister"> Lister</button> </a>
 
 
 

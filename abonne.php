@@ -27,7 +27,12 @@
          </div>
      </div>
 
+     <?php
+        if (isset($_POST['valider'])) empty($_POST['valider']); {
+            echo "<div class='col-md-6 offset-md-3 bg-primary text-center text-light fofofo'><h1>Ajout effectué</h1></div>";
+        }
 
+        ?>
 
 
      <?php
@@ -36,36 +41,28 @@
         $date_d_ab = $_POST['Date_d_ab'];
         $telephone = $_POST['telephone'];
         $email = $_POST['email'];
-        // $annuler = $_POST['annuler'];
-        // $valider = $_POST['valider'];
-        // $lister = $_POST['lister'];
+       
         include 'connect_db.php';
         if (isset($_POST['valider'])) {
-            $req = $base->prepare('INSERT INTO abonnees (nom,date_n,date_d_ab,telephone,email) VALUES(:Nom,:Date_n,:Date_d_ab,:telephone,:email)');
-            // $req1 = $base->prepare('SELECT * FROM abonnees ORDER BY Num  DESC LIMIT 1');
+
+            $req = $base->prepare('INSERT INTO abonnees (nom, date_n, date_d_ab, telephone, email) VALUES (:nom, :date_n, :date_d_ab, :telephone, :email)');
             if (empty($nom) || empty($date_n) || empty($date_d_ab) || empty($telephone) || empty($email)) {
-                echo '<div class="alert alert-danger">
-                    <strong>Erreur!</strong> Veuillez remplir tous les champs.
-                    </div>';
+                echo '<div class=alert alert-danger> Veuillez remplir tous les champs </div>';
             } else {
                 $req->execute(array(
-                    'Nom' => $nom,
-                    'Date_n' => $date_n,
-                    'Date_d_ab' => $date_d_ab,
+                    'nom' => $nom,
+                    'date_n' => $date_n,
+                    'date_d_ab' => $date_d_ab,
                     'telephone' => $telephone,
                     'email' => $email
                 ));
             }
         }
-
-
         ?>
 
      <div class="container-fluid formu">
          <div class=" row fofo">
-             <div class=" col-md-8 offset-md-2  log">
-                 <h1>Ajout Effectué !!</h1>
-             </div>
+
              <div class=" col-md-12 format">
                  <div class="inser">
                      <form action="" method="">
@@ -90,11 +87,6 @@
      </div>
 
      </div>
-
-
-
-
-
 
      <!-- le footer  -->
      <div class="container-fluid footer">

@@ -16,16 +16,44 @@
 
 <body>
     <!-- le header  -->
-    <div class="container-fluid tete">
-        <div class="row teta">
-            <div class=" col-md-3 offset-md-1 logo1">
-                <img src="./Logo.png" alt="">
-            </div>
-            <div class=" col-md-8 texte">
-                <h1>Gestion des abonnés</h1>
-            </div>
+    <div class="row teta">
+        <div class=" col-md-3 offset-md-1 col-sm-3 logo1">
+            <img src="./Logo.png" alt="">
+        </div>
+        <div class=" col-md-5 col-sm-3 texte">
+            <h1>Gestion des abonnés</h1>
+        </div>
+        <div class="compteur col-md-1 offset-2 col-sm-3  text-center text-light">
+
+            <?php
+            include 'connect_db.php';
+            $rea = $base->prepare('SELECT COUNT(*) FROM abonnees');
+            $rea->execute();
+            $nb = $rea->fetchColumn();
+            echo $nb;
+
+            ?>
+            <p>abonnés</p>
         </div>
     </div>
+    <div class="row titi">
+        <?php
+        include 'connect_db.php';
+        if (isset($_GET['modif'])) {
+            echo "<div class='col-md-6 offset-md-3 alert-success bg-primary text-light text-center fofofo'><h4> Modifiée avec Succès!</h4></div>";
+        }
+        if (isset($_GET['supp'])) {
+            echo "<div class='col-md-6 offset-md-3 alert-success bg-primary text-light text-center fofofo'><h4> Supprimée avec Succès</h4></div>";
+        }
+
+        ?>
+
+
+    </div>
+
+
+    </div>
+
 
     <!-- le tableau des abonnes  -->
     <div class="container-fluid tableau">
@@ -39,8 +67,8 @@
                 include 'connect_db.php';
 
                 $reponse = $base->query('SELECT * FROM abonnees');
-                echo '<table class="table table-striped  ">
-                    <thead>
+                echo '<table class="table table-striped-row">
+                  
                         <tr>
                             <th scope="col" class="compt">No</th>
                             <th scope="col">Nom</th>
@@ -53,15 +81,15 @@
                 $i = 1;
                 while ($donnees = $reponse->fetch()) {
 
-                    echo '<tr>
-                          <td class="compt">' . $i . '</td> 
-                        <td>' . $donnees['nom'] . '</td>
-                        <td>' . $donnees['date_n'] . '</td>
-                        <td>' . $donnees['date_d_ab'] . '</td>
-                        <td>' . $donnees['telephone'] . '</td>
-                        <td> <a href="mailto:' . $donnees['email'] . ' ">' . $donnees['email'] . '</a> </td>
-                        <td class="compt"><a href="modifier.php?id=' . $donnees['Num'] . '"> <i class="fa-solid fa-pen xicon"></i> </a> <a href="supprimer.php?id=' . $donnees['Num'] . '"><i class="fa-solid fa-trash  xicon"></i></a></td>
-                        </tr>';
+                    echo "<tr id=ligne$i>
+                          <td class='compt'> $i </td> 
+                        <td> $donnees[nom] </td>
+                        <td> $donnees[date_n]  </td>
+                        <td> $donnees[date_d_ab] </td>
+                        <td> $donnees[telephone]  </td>
+                        <td> <a href='mailto: $donnees[email]   '>  $donnees[email]  </a> </td>
+                        <td class='compt'><a href='modifier.php?nom=$donnees[nom]&Date_n=$donnees[date_n]&Date_d_ab=$donnees[date_d_ab]&telephone=$donnees[telephone]&email=$donnees[email]&id=$donnees[Num]'> <i class='fa-solid fa-pen xicon'></i> </a> <a href='supprimer.php?id=$donnees[Num]'><i class='fa-solid fa-trash  xicon'></i></a></td>
+                        </tr>";
                     $i++;
                 };
 
