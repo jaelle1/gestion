@@ -164,19 +164,31 @@ button {
   /* padding: 5px; */
   cursor: pointer;
 }
-#annuler {
-  background-color: #ee1212;
+#valider {
+  background-color: #006af5;
   height: 30px;
   border-radius: 20px;
 }
-#Valider {
-  background-color: #129dee;
+#annuler {
+  background-color: #fc0000;
   border-radius: 20px;
+}
+#annuler:hover {
+  background-color: #ee1212;
+  border-radius: 20px;
+  transition: 0.5s;
+   scale: 1.1;
 }
 #Lister {
   background-color: #6fc02b;
   height: 30px;
   border-radius: 20px;
+}
+#Lister:hover {
+  background-color: #6fc02b;
+  border-radius: 20px;
+  transition: 0.5s;
+   scale: 1.1;
 }
 
 /* footer footer */

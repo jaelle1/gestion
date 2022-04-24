@@ -125,13 +125,14 @@ span.btn{
     padding-top: 5px;
     
 }
-div.ferm{
+div .ferm{
    
    display: flex; 
+   height: 25px !important;
    justify-content: center;
    text-align: center;
 }
-span.btnn{
+span .btnn{
     background-color: red;
     height: 20px;
     width: 100px;

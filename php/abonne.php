@@ -5,8 +5,8 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./assets/abonne.css">
-     <link rel="stylesheet" href="./assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="../assets/abonne.css">
+     <link rel="stylesheet" href="../assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
 
 
 
@@ -19,20 +19,13 @@
      <div class="container-fluid tete">
          <div class="row teta">
              <div class=" col-md-3 offset-md-1 logo1">
-                 <img src="./Logo.png" alt="">
+                 <img src="../image/Logo.png" alt="">
              </div>
              <div class=" col-md-8 texte">
                  <h1>Gestion des abonnés</h1>
              </div>
          </div>
      </div>
-
-     <?php
-        if (isset($_POST['valider'])) empty($_POST['valider']); {
-            echo "<div class='col-md-6 offset-md-3 bg-primary text-center text-light fofofo'><h1>Ajout effectué</h1></div>";
-        }
-
-        ?>
 
 
      <?php
@@ -41,8 +34,9 @@
         $date_d_ab = $_POST['Date_d_ab'];
         $telephone = $_POST['telephone'];
         $email = $_POST['email'];
-       
+
         include 'connect_db.php';
+        
         if (isset($_POST['valider'])) {
 
             $req = $base->prepare('INSERT INTO abonnees (nom, date_n, date_d_ab, telephone, email) VALUES (:nom, :date_n, :date_d_ab, :telephone, :email)');
@@ -57,6 +51,10 @@
                     'email' => $email
                 ));
             }
+        }
+        if(isset($_POST['annuler'])){
+
+            header('location: ./enregistrer.php');
         }
         ?>
 
@@ -75,11 +73,11 @@
                      </form>
                  </div>
                  <div class="forma1">
-                     <div class=" col-md-1 offset-md-4 coca1"><img src="./im1.jpg"></div>
+                     <div class=" col-md-1 offset-md-4 coca1"><img src="../image/im1.jpg"></div>
                      <div class="coca">
-                         <div class="spa"> <span> <a href="liste.php"> <button type="submit" value="Valider" name="valider" id="Lister"> Modifier</button></a></span> <span><a href="liste.php"> <button type="submit" value="Annuler" name="annuler" id="annuler">Fermer</button></a></span></div>
+                         <div class="spa"> <span> <a href="enregistrement.php"> <button type="submit" value="Valider" name="valider" id="valider">Ajouter</button></a></span> <span><a href="liste.php"> <button type="submit" value="Annuler" name="annuler" id="annuler">Fermer</button></a></span></div>
                      </div>
-                     <a href="liste.php" class="list"> <button type="submit" value="Lister" name="lister" id="lister">Lister</button></a>
+                     <a href="liste.php" class="list"> <button type="submit" value="Lister" name="lister" id="Lister">Lister</button></a>
                  </div>
 
              </div>

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/liste.css">
+    <link rel="stylesheet" href="../assets/liste.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="./assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
 
 
 
@@ -18,23 +18,12 @@
     <!-- le header  -->
     <div class="row teta">
         <div class=" col-md-3 offset-md-1 col-sm-3 logo1">
-            <img src="./Logo.png" alt="">
+            <img src="../image/Logo.png" alt="">
         </div>
         <div class=" col-md-5 col-sm-3 texte">
             <h1>Gestion des abonnés</h1>
         </div>
-        <div class="compteur col-md-1 offset-2 col-sm-3  text-center text-light">
 
-            <?php
-            include 'connect_db.php';
-            $rea = $base->prepare('SELECT COUNT(*) FROM abonnees');
-            $rea->execute();
-            $nb = $rea->fetchColumn();
-            echo $nb;
-
-            ?>
-            <p>abonnés</p>
-        </div>
     </div>
     <div class="row titi">
         <?php
@@ -56,7 +45,34 @@
 
 
     <!-- le tableau des abonnes  -->
-    <div class="container-fluid tableau">
+
+    <div class="container-fluid tableau d-flex justify-content-center">
+
+
+        <div class=" col-md-12 d-flex moov  justify-content-between">
+
+            <div class="compteur col-md-1 col-sm-2 ms-3  text-center text-light bg-primary">
+                <?php
+                include 'connect_db.php';
+                $rea = $base->prepare('SELECT COUNT(*) FROM abonnees');
+                $rea->execute();
+                $nb = $rea->fetchColumn();
+                echo $nb . " Abonnés";
+
+                ?>
+            </div>
+            <div class="compteur col-md-1 col-sm-2 me-3  text-center text-light bg-success">
+
+                <a href="./enregistrement.php" class=" col-md-1 col-sm-2  text-center text-light">Ajouter</a>
+            </div>
+            <div class="compteur col-md-1 col-sm-2 me-3  text-center text-light bg-danger">
+
+                <a href="../index.html" class=" col-md-1 col-sm-2  text-center text-light">Fermer</a>
+            </div>
+
+        </div>
+
+
 
         <div class="row table">
             <div class="col-md-12 bordure">

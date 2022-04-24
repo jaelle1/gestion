@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/enregistrement.css">
-    <link rel="stylesheet" href="./assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/enregistrement.css">
+    <link rel="stylesheet" href="../assets/bootstrap-5.1.3-dist/css/bootstrap.min.css">
 
 
 
@@ -17,7 +17,7 @@
     <div class="container-fluid tete">
         <div class="row teta">
             <div class=" col-md-3 offset-md-1 logo1">
-                <img src="./Logo.png" alt="">
+                <img src="../image/Logo.png" alt="">
             </div>
             <div class=" col-md-8 texte">
                 <h1>Gestion des abonnés</h1>
@@ -27,7 +27,7 @@
     <div class="container-fluid formu">
         <div class=" row fofo">
             <div class=" col-md-2 offset-md-4 log">
-                <img src="./Logo.png" alt="">
+                <img src="../image/Logo.png" alt="">
             </div>
             <div class=" col-md-8 offset-md-2">
                 <form action="abonne.php" method="post">
@@ -40,7 +40,7 @@
                     <span class="buton1"><button type="submit" value="Valider" name="valider" id="Valider"> Valider</button></span>
 
                 </form>
-
+             
 
 
             </div>

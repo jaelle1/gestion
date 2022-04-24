@@ -80,7 +80,7 @@ body {
 }
 .format input {
   width: 225px;
-  
+
   height: 30px;
   border-bottom: solid 1px #750202;
   border-radius: 2px;
@@ -121,7 +121,7 @@ body {
   border-radius: 25px;
   font-size: 20px;
   font-weight: bold;
-margin-left: 10px;
+  margin-left: 10px;
   margin-top: 10px;
 }
 /* .inputnom {
@@ -169,11 +169,8 @@ button {
   height: 30px;
   border-radius: 20px;
 }
-#Valider {
-  background-color: #129dee;
-  border-radius: 20px;
-}
-#Lister {
+
+#modifier {
   background-color: #6fc02b;
   height: 30px;
   border-radius: 20px;
@@ -284,11 +281,10 @@ button {
     cursor: pointer;
   }
   .forma1 .coca1 {
-  width: 100px;
-  height: 100px;
-  margin-left: 50px;
-  
-}
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+  }
 
   /* footer for mobile */
   .footer {
