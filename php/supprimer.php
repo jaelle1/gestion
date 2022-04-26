@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
         'id' => $id
 
     ));
-    header("Location: liste.php?supp=1");
+    header("Location: liste.php?supp=ok");
 }
 
 ?>

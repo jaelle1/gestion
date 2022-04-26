@@ -25,11 +25,6 @@ div h2 {
   margin-top: 4.5rem;
   padding: 5px;
 }
-/*partie se connecter fin*/
-h2 a {
-  text-decoration: none;
-  color: white;
-}
 
 /*footer*/
 .footer {
@@ -110,21 +105,19 @@ form label {
   justify-content: center;
   text-align: center;
 } */
- .ferm .btn1 {
+.ferm .btn1 {
   background: blue !important;
-  color: white;
-  height: 25px;
+  height: 40px;
   width: 140px;
   border: solid black 1px;
   border-radius: 50px;
   font-size: 15px;
-  padding-top: 5px;
-  text-decoration: none;
+  /* padding-top: 5px; */
 }
 
-.bago{
+.bago {
   background-color: red !important;
-  height: 20px;
+  height: 40px;
   width: 100px;
   border: solid 1px;
   border-radius: 50px;
@@ -132,11 +125,18 @@ form label {
   margin-left: 15px;
   margin-top: 5px;
 }
+.ferm a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
 #motdepasse {
   margin-left: 25px;
 }
 /*footer username*/
 .foot {
+  margin-top: 30px;
   background-color: #750202;
 }
 .www {
