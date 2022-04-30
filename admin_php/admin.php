@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 include '../abonnes_php/connect_db.php';
 
 $valider= $_POST["valider"];

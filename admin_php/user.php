@@ -23,19 +23,18 @@
 		<div class="container bon">
 			<div class="row jour">
 				<div class="col-md-10   ">
-					<form action="index.php" method="post">
-		                <label>Nom d'utilisateur:</label> <input type="text" name="username" id=""><br><br>
+					<form action="" method="post">
+		                <label>E-mail: </label> <input type="text" name="email" id=""><br><br>
 
-						<label>Mot de passe: </label> <input type="password" name="text" id="motdepasse"><br /><br>
+						<label>Mot de passe: </label> <input type="password" name="passwords" id="motdepasse"><br /><br>
 
 						<input type="checkbox" onclick="Afficher()" id="aff"> Afficher le mot de passe<br><br>
 
-
-					</form>
 					<div class="ferm">
-						<button class="btn1"><a href="./index.php">connexion</a></button>
+						<button class="btn1" type="submit" name="connecter"> <a href="../abonnes_php/enregistrement.php">connexion</a></button>
 						
 					</div>
+					</form>
 				</div>
 			</div>
 		</div>
