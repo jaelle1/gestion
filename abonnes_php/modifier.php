@@ -87,13 +87,6 @@
          </div>
      </div>
 
-
-
-
-
-
-
-
      <!-- le footer  -->
      <div class="container-fluid footer">
          <div class="row foot">

@@ -67,7 +67,7 @@
             </div>
             <div class="compteur col-md-1 col-sm-2 me-3  text-center text-light bg-danger">
 
-                <a href="../index.html" class=" col-md-1 col-sm-2  text-center text-light">Fermer</a>
+                <a href="../index.php" class=" col-md-1 col-sm-2  text-center text-light">Fermer</a>
             </div>
 
         </div>

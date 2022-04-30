@@ -25,6 +25,8 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `abonnees`
 --
+CREATE DATABASE IF NOT EXISTS `gestion_abonnes`; 
+
 
 CREATE TABLE IF NOT EXISTS `abonnees` (
   `Num` int(11) NOT NULL AUTO_INCREMENT,
@@ -36,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `abonnees` (
   PRIMARY KEY (`Num`),
   UNIQUE KEY `email` (`email`),
   UNIQUE KEY `email_2` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=116 ;
+) ;
 
 --
 -- Contenu de la table `abonnees`

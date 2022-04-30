@@ -16,17 +16,30 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
+  
+  
 }
-div h2 {
-  background-color: rgb(161, 161, 160);
+.ins {
+  background-color: rgb(21, 210, 8);
   border-radius: 50px;
-  height: 60px;
-  width: 200px;
-  margin-top: 4.5rem;
+  height: 40px;
+  width: 150px;
+ margin-top: 1rem;
+  padding: 5px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.con{
+  background-color: #081ae4;
+  border-radius: 50px;
+  height: 40px;
+  width: 150px;
+  margin-top: 1rem;
+  font-size: 20px;
   padding: 5px;
 }
 /*partie se connecter fin*/
-h2 a {
+h3 a {
   text-decoration: none;
   color: white;
 }
@@ -34,7 +47,7 @@ h2 a {
 /*footer*/
 .footer {
   background-color: #750202;
-  margin-top: 11rem;
+  margin-top: 9rem;
 }
 .footer h1 {
   color: white;
@@ -57,7 +70,7 @@ h2 a {
   color: white;
   font-weight: bold;
   font-size: 15px;
-  /* float: right; */
+  float: right;
 }
 
 /*fin index.php*/
