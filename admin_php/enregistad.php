@@ -23,6 +23,16 @@
             </div>
         </div>
     </div>
+
+    <?php
+    if(isset($_GET["error"])){
+        if($_GET["error"]==1){
+        echo"<div class='mot-de-pass' style='color:red;text-align:center;font-weight:bold;'
+        >mot de passe different!</div>";
+        }
+        
+    }
+    ?>
     <div class="container-fluid formu">
         <div class=" row fofo">
             <div class=" col-md-2 offset-md-4 log">
@@ -33,8 +43,8 @@
                     Nom<input type="text" name="nom" id="" class="inputnom" required=""><br>
                     Prenom <input type="text" name="prenom" id="" class="inputprenom" required><br>
                     E-mail <input type="email" name="email" id="" class="inputmail" required><br>
-                     Passwords<input type="passwords" name="passwords" id="" class="inputpasswords" required><br>
-                    confirmer pass <input type="passwords" name="pconf" id="" class="inputpasswords1" required>
+                     Passwords<input type="password" name="passwords" id="" class="inputpasswords" required><br>
+                    confirmer pass <input type="password" name="pconf" id="" class="inputpasswords1" required>
                     
                     <button type="submit" value="fermer" name="fermer" id="fermer"><a  class="buton" href="../index.php">Fermer</a></button> 
                     <span class="buton1"><button type="submit" value="Valider" name="valider" id="Valider"> Valider</button></span>

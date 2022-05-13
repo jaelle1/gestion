@@ -7,9 +7,14 @@ $valider= $_POST["valider"];
      $prenom=$_POST["prenom"];
      $email=$_POST["email"];
      $passwords=md5($_POST["passwords"]);
-     $pconf=$_POST["pconf"];
+     $pconf=md5($_POST["pconf"]);
     $_SESSION['nom']=$nom;
     $_SESSION['email']=$email;
+
+
+    if($passwords==$pconf){
+      // echo"mot de passe incorrect";
+    
      $req = $base->prepare('INSERT INTO administrateurs(nom,prenom,email,passwords)
                         VALUES (:nom,:prenom,:email,:passwords)');
 
@@ -17,24 +22,10 @@ $valider= $_POST["valider"];
             
 if(!empty($nom) && !empty($prenom) && !empty($email) && !empty($password)  && !empty($password_repeat))
                         {
-
-
-                        }else{
-                        
-
-                    echo '<b>Veuillez remplir tous les champs</b>';
-                        
-                        ?>
-
-                        <?php
+                          echo '<b>Veuillez remplir tous les champs</b>';
+                  
                         }
-
-                        if(!empty($nom) && !empty($prenom) && !empty($email) && !empty($password))
-                        
-                        {
-
-
-                        }else{
+                        else{
 
 
                         session_start();
@@ -46,6 +37,11 @@ if(!empty($nom) && !empty($prenom) && !empty($email) && !empty($password)  && !e
                         }
 
 
+}
+else{
+  
+  header("location: ./enregistad.php?error=1");
+}
                         
 
-                           ?>
+                           ?> 

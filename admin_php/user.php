@@ -19,11 +19,21 @@
 			<div class="col-md-10 offset-md-2 col-xs-12 texte">
 				<h1>Gestion des administrateurs</h1>
 			</div>
+
+			<?php
+			if(isset($_GET["erreur"])){
+				if($_GET["erreur"]==1){
+					echo'<div class="alert alert-danger" style="font-weight:bold;color:red;margin: top 10px;text-align:center;margin: right 10px;">!ERROR</div>';
+				}
+			}
+			
+			
+			?>
 		</div>
 		<div class="container bon">
 			<div class="row jour">
 				<div class="col-md-10   ">
-					<form action="" method="post">
+					<form action="./connect_admin.php" method="post">
 		                <label>E-mail: </label> <input type="text" name="email" id=""><br><br>
 
 						<label>Mot de passe: </label> <input type="password" name="passwords" id="motdepasse"><br /><br>
@@ -31,7 +41,7 @@
 						<input type="checkbox" onclick="Afficher()" id="aff"> Afficher le mot de passe<br><br>
 
 					<div class="ferm">
-						<button class="btn1" type="submit" name="connecter"> <a href="../abonnes_php/enregistrement.php">connexion</a></button>
+						<button class="btn1" type="submit" name="connecter"> connexion</button>
 						
 					</div>
 					</form>

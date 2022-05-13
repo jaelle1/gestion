@@ -155,6 +155,13 @@ body {
    float: right;
     margin-right: 10px;
   }
+  .mot-de-pass{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #750202;
+  }
   
   @media only screen and (max-width: 768px) {
     /* //entete for mobile  */

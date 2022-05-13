@@ -5,7 +5,7 @@ try {
     $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
  catch (Exception $e) {
-    die('Erreur vous avez un probleme de connexion a la base de donnees');
+    die('Erreur vous avez un probleme de connexion a la base de donnees:');
 }
 
 ?>

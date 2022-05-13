@@ -6,19 +6,29 @@
     $passwords= md5($_POST['passwords']);
     $connecter=$_POST['connecter'];
     $error="";
+    echo "$email $passwords";
 
     if(isset($connecter)){
         
-        $verif=$base->prepare("SELECT * FROM administrateurs WHERE email=? and passwords=? limit 1");
-        $verif->execute(array($email,$passwords));
+        $verif=$base->prepare("SELECT * FROM administrateurs WHERE email=? and passwords=?");
+        $verif->execute(array(
+            $email,
+            $passwords));
         $utilisateur=$verif->fetchAll();
-        if(count($utilisateur)>0){
+        if(!$utilisateur){
+            echo'<div class="alert alert-danger" style="font-weight:bold">!ERROR</div>';
+             header("location: ./user.php?erreur=1");
+        }
+            else 
+            {
 
-            $_SESSION['nom']=$nom;
-            $_SESSION['connecter']='yes';
-
+            $_SESSION['nom']=$utilisateur['nom'];
+            $_SESSION['connecter']=1;
+            //echo'<div class="alert alert-danger" style="font-weight:bold">enregister avec succes</div>';
+        
             header('location:../abonnes_php/enregistrement.php');
         }
+    
 
         
         }
